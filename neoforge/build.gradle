@@ -1,6 +1,8 @@
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev'
+    id 'java'
+    id 'maven-publish'
 }
 
 neoForge {
@@ -55,6 +57,27 @@ sourceSets.configureEach {
         configurations.named(variant) {
             attributes {
                 attribute(loaderAttribute, 'neoforge')
+            }
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            groupId = group
+            artifactId = "${mod_id}-neoforge"
+            version = version
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/${project.findProperty('gpr.owner')}/${project.findProperty('gpr.repo')}")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
