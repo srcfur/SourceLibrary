@@ -30,10 +30,11 @@ jobs:
 
       - uses: gradle/actions/setup-gradle@v4
 
-      - name: Get Environment from gradle
+      - name: Get version from gradle
         run: |
           chmod +x gradlew
-          ./gradlew -q printInfo >> $GITHUB_ENV
+          VERSION=$(./gradlew -q properties --property version | grep '^version:' | awk '{print $2}')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
 
       - name: Build jars
         run: |
