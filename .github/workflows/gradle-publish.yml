@@ -36,7 +36,7 @@ jobs:
           chmod +x gradlew
           VERSION=$(./gradlew -q properties --property version | grep '^version:' | awk '{print $2}')
           echo "VERSION=$VERSION" >> $GITHUB_ENV
-          MCVER=$(./gradlew -q properties --property minecraft_version | grep '^version:' | awk '{print $2}')
+          MCVER=$(./gradlew -q properties --property minecraft_version | grep '^minecraft_version:' | awk '{print $2}')
           echo "MCVERSION=$MCVER" >> $GITHUB_ENV
 
       - name: Build jars
