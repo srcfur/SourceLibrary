@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'   # use 17 for Minecraft 1.18-1.20.4
+          java-version: '25'   # use 17 for Minecraft 1.18-1.20.4
           server-id: github
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
