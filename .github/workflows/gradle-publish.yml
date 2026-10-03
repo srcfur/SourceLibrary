@@ -31,7 +31,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Get Environment from gradle
-        run: ./gradlew -q printInfo >> $GITHUB_ENV
+        run: |
+          chmod +x gradlew
+          ./gradlew -q printInfo >> $GITHUB_ENV
 
       - name: Build jars
         run: |
