@@ -9,7 +9,7 @@ C:\\Users\\THatd\\.gradle\\caches\\neoformruntime\\assets
 
 # User Supplied Program Arguments
 --mod
-examplemod
+srclib
 --all
 --output
 H:\\MinecraftMods\\SourceLibrary\\neoforge\\src\\generated\\resources

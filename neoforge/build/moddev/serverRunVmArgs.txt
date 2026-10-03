@@ -6,4 +6,4 @@ java.base/java.lang.invoke=ALL-UNNAMED
 jdk.naming.dns/com.sun.jndi.dns=java.naming
 -Dlog4j2.configurationFile=H:\\MinecraftMods\\SourceLibrary\\neoforge\\build\\moddev\\serverLog4j2.xml
 -Djava.net.preferIPv6Addresses=system
--Dneoforge.enabledGameTestNamespaces=examplemod
+-Dneoforge.enabledGameTestNamespaces=srclib

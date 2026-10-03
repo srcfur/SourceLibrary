@@ -11,8 +11,8 @@ displayName = "Source Library" #mandatory
 logoFile="srclib.png" #optional
 credits="" #optional
 authors = "Srcfur" #optional
-description = '''The description of your mod. 
-Accepts multilines.''' #mandatory (Supports multiline text)
+description = '''A common set of code used accross a bunch of projects from Srcfur
+ermmm... pampers *drools* uwu''' #mandatory (Supports multiline text)
 [[mixins]]
 config = "srclib.mixins.json"
 [[mixins]]
