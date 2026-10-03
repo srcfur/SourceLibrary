@@ -13,7 +13,7 @@ env:
   GROUP_ID: com.srcfur     # Maven groupId used in the registry
   FILE_GROUP: srclib         # the {group} part of your jar filenames
   VERSION: 1.0.0            # the {version} part of your jar filenames
-  MCVER: 26.1.2
+  MCVERSION: 26.1.2
 
 jobs:
   upload:
