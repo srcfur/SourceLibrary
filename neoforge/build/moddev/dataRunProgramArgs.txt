@@ -1,0 +1,17 @@
+# Main Class
+net.neoforged.fml.startup.DataClient
+
+# NeoForge Run-Type Program Arguments
+--assetIndex
+30
+--assetsDir
+C:\\Users\\THatd\\.gradle\\caches\\neoformruntime\\assets
+
+# User Supplied Program Arguments
+--mod
+examplemod
+--all
+--output
+H:\\MinecraftMods\\SourceLibrary\\neoforge\\src\\generated\\resources
+--existing
+H:\\MinecraftMods\\SourceLibrary\\neoforge\\src\\main\\resources
