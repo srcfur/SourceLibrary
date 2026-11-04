@@ -62,7 +62,7 @@ jobs:
             mvn -B deploy:deploy-file \
               -Dfile="$FILE" \
               -DgroupId="$GROUP_ID" \
-              -DartifactId="${FILE_GROUP}-${module}-{$MCVER}" \
+              -DartifactId="${FILE_GROUP}-${module}-{$MCVERSION}" \
               -Dversion="{$VERSION}" \
               -Dpackaging=jar \
               -DgeneratePom=true \
