@@ -24,3 +24,5 @@ run
 runs
 *.lock
 /.gradle
+/common/build/tmp
+/neoforge/build

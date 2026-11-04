@@ -1,6 +1,7 @@
 plugins {
-    // see https://fabricmc.net/develop/ for new versions
-    id 'net.fabricmc.fabric-loom' version '1.15.5' apply false
+    // 1.21.1 uses the classic (remapping) Loom with Mojang mappings.
+    // "net.fabricmc.fabric-loom" is the unobfuscated-only Loom for 26.1+ and can't build 1.21.1.
+    id 'fabric-loom' version '1.10.5' apply false
     // see https://projects.neoforged.net/neoforged/moddevgradle for new versions
     id 'net.neoforged.moddev' version '2.0.141' apply false
 }

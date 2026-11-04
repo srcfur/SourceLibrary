@@ -36,7 +36,7 @@ public class MultiloaderLoaderPlugin implements org.gradle.api.Plugin<org.gradle
   }
   private static void assertSupportedByCurrentGradleVersion() {
       if (GradleVersion.current().getBaseVersion().compareTo(GradleVersion.version(MIN_SUPPORTED_GRADLE_VERSION)) < 0) {
-          throw new RuntimeException("Precompiled Groovy script plugins built by Gradle 9.2.0 require Gradle "+MIN_SUPPORTED_GRADLE_VERSION+" or higher");
+          throw new RuntimeException("Precompiled Groovy script plugins built by Gradle 9.8.0 require Gradle "+MIN_SUPPORTED_GRADLE_VERSION+" or higher");
       }
   }
 }

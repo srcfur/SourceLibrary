@@ -1,7 +1,7 @@
 package com.srcfur.srclib.utility;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -12,16 +12,17 @@ import java.util.List;
 import java.util.function.BiFunction;
 
 public class BlockEntityHelper<T extends BlockEntity> extends GenericHelper<BlockEntityProperties<T>> {
-    public BlockEntityHelper(Identifier identifier, BiFunction<BlockPos, BlockState, T> factory, List<BlockHelper<?>> blocks) {
-        super(identifier, ()->{
+    public BlockEntityHelper(ResourceLocation identifier, BiFunction<BlockPos, BlockState, T> factory, List<BlockHelper<?>> blocks) {
+        super(identifier, () -> {
             ArrayList<Block> retBlocks = new ArrayList<>();
             blocks.forEach(raw -> retBlocks.add(raw.get()));
             return new BlockEntityProperties<>(factory, retBlocks);
         });
     }
+
     private BlockEntityType<T> entity;
 
-    public BlockEntityType<T> getType(){
+    public BlockEntityType<T> getType() {
         return entity;
     }
 

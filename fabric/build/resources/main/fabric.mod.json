@@ -1,7 +1,7 @@
 {
     "schemaVersion": 1,
     "id": "srclib",
-    "version": "26.1.2.0",
+    "version": "1.0.0",
     "name": "Source Library",
     "description": "A common set of code used accross a bunch of projects from Srcfur\\nermmm... pampers *drools* uwu",
     "authors": [
@@ -22,10 +22,10 @@
         "srclib.fabric.mixins.json"
     ],
     "depends": {
-        "fabricloader": ">=0.18.6",
+        "fabricloader": ">=0.16.14",
         "fabric-api": "*",
-        "minecraft": "~26.1.2",
-        "java": ">=25"
+        "minecraft": "~1.21.1",
+        "java": ">=21"
     },
     "suggests": {
         "another-mod": "*"

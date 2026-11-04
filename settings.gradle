@@ -11,7 +11,13 @@ pluginManagement {
             }
             filter {
                 includeGroupAndSubgroups('net.fabricmc')
+                // plugin marker group for the 'fabric-loom' plugin id
+                includeGroup('fabric-loom')
             }
+        }
+        maven {
+            name = 'NeoForged'
+            url = uri('https://maven.neoforged.net/releases')
         }
     }
 }
