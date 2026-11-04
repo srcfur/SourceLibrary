@@ -63,7 +63,7 @@ jobs:
               -Dfile="$FILE" \
               -DgroupId="$GROUP_ID" \
               -DartifactId="${FILE_GROUP}-${module}" \
-              -Dversion="$VERSION" \
+              -Dversion="{$MCVER}-{$VERSION}" \
               -Dpackaging=jar \
               -DgeneratePom=true \
               -DrepositoryId=github \
