@@ -12,8 +12,8 @@ permissions:
 env:
   GROUP_ID: com.srcfur     # Maven groupId used in the registry
   FILE_GROUP: srclib         # the {group} part of your jar filenames
-  VERSION: 1.0.0            # the {version} part of your jar filenames
-  MCVERSION: 1.21.1
+  VERSION: 1.2.0            # the {version} part of your jar filenames
+  MCVERSION: 26.1.2
 
 jobs:
   upload:
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '21'   # use 17 for Minecraft 1.18-1.20.4
+          java-version: '25'   # use 17 for Minecraft 1.18-1.20.4
           server-id: github
           server-username: MAVEN_USERNAME
           server-password: MAVEN_PASSWORD
@@ -63,7 +63,7 @@ jobs:
               -Dfile="$FILE" \
               -DgroupId="$GROUP_ID" \
               -DartifactId="${FILE_GROUP}-${module}" \
-              -Dversion="$VERSION" \
+              -Dversion="${MCVERSION}-${VERSION}" \
               -Dpackaging=jar \
               -DgeneratePom=true \
               -DrepositoryId=github \
