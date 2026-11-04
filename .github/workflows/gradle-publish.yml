@@ -2,7 +2,7 @@ name: Upload to GitHub Maven Packages
 
 on:
   push:
-    branches: [main]      # change to your default branch
+    branches: [main, "1.21.1"]      # change to your default branch
   workflow_dispatch:
 
 permissions:
@@ -62,8 +62,8 @@ jobs:
             mvn -B deploy:deploy-file \
               -Dfile="$FILE" \
               -DgroupId="$GROUP_ID" \
-              -DartifactId="${FILE_GROUP}-${module}-${MCVERSION}" \
-              -Dversion="${VERSION}" \
+              -DartifactId="${FILE_GROUP}-${module}" \
+              -Dversion="${MCVERSION}-${VERSION}" \
               -Dpackaging=jar \
               -DgeneratePom=true \
               -DrepositoryId=github \
